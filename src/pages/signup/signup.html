@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-grid>
+    <ion-col align-self-center>
+      <div class="splash-logo"></div>
+    </ion-col>
+  </ion-grid>
+
+</ion-header>
+
+
+<ion-content class="bg">
+  <form (submit)="doSignup()">
+    <ion-list>
+
+      <ion-item class="input-bg">
+        <ion-label stacked>{{ 'NAME' | translate }}</ion-label>
+        <ion-input type="text"placeholder="Juan Dela Cruz"><!-- [(ngModel)]="account.name" name="name" --></ion-input>
+      </ion-item>
+
+      <ion-item class="input-bg">
+        <ion-label stacked>{{ 'EMAIL' | translate }}</ion-label>
+        <ion-input type="email" placeholder="jdelacruz@email.com"><!--[(ngModel)]="account.email" name="email"--></ion-input>
+      </ion-item>
+
+      <ion-item class="input-bg">
+        <ion-label stacked>{{ 'PASSWORD' | translate }}</ion-label>
+        <ion-input type="password" [(ngModel)]="account.password" name="password"placeholder="password"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button round class="signup-button">{{ 'SIGNUP_BUTTON' | translate }}</button>
+      </div>
+
+    </ion-list>
+  </form>
+</ion-content>
